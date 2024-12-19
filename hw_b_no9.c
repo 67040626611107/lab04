@@ -7,14 +7,19 @@ int D = 0;
 int F = 0;
 char Get_grade(int point) {
     if (point >= 85) {
+        A++;
         return 'A';
     } else if (point >= 75)  {
+        B++;
         return 'B';
     } else if (point >= 68)  {
+        C++;
         return 'C';
     }  else if (point >= 55)  {
+        D++;
         return 'D';
     } else {
+        F++;
         return 'F';
     }
 }
@@ -31,5 +36,6 @@ int main() {
         grade = Get_grade(score);
         printf("%d (%c) %c",score,grade,'\n');
     }    
+    printf("A(%d)\nB(%d)\nC(%d)\nD(%d)\nF(%d)",A,B,C,D,F);
     return (0);
 }
